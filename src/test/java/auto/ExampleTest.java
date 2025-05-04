@@ -14,4 +14,5 @@ public class ExampleTest {
     void dummyTest2() {
         System.out.println("Hello from test!");
     }
+
 }
