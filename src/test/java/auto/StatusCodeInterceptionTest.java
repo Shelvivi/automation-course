@@ -1,15 +1,11 @@
 package auto;
-
 import com.microsoft.playwright.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.Collections;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+//2.2 Перехват сетевых запросов/Практическое задание 1: Перехват и модификация API
 public class StatusCodeInterceptionTest {
     Playwright playwright;
     Browser browser;
