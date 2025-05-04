@@ -4,6 +4,8 @@ import com.microsoft.playwright.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
+
+
 public class BaseTest {
     Playwright playwright;
     Browser browser;
@@ -24,4 +26,5 @@ public class BaseTest {
     void tearDown() {
         playwright.close();
     }
-}
+
+    }
