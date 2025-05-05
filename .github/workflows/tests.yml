@@ -43,6 +43,9 @@ jobs:
       - name: run BlockTests
         run: mvn test -Dtest=BlockTests
 
+      - name: run CartTest
+        run: mvn test -Dtest=CartTest
+
 
       - name: Upload test results
         if: always()

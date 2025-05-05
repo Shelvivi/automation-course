@@ -33,3 +33,18 @@ jobs:
           export DISPLAY=:0
           Xvfb :0 -screen 0 1280x720x24 >/dev/null 2>&1 &  
           mvn clean test -B
+
+        stages:
+            - test
+
+        e2e_tests:
+            stage: test
+            image: mcr.microsoft.com/playwright/java:v1.40.0-jammy
+            script:
+              - mvn test
+        artifacts:
+            paths:
+                - target/screenshots/  # Директория со скриншотами
+                - target/videos/       # Директория с видео
+            when: always             # Сохранять даже при падении тестов
+            expire_in: 7 days        # Автоудаление через неделю
