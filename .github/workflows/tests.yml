@@ -40,10 +40,10 @@ jobs:
       - name: Run StatusCodeInterceptionTest
         run: mvn test -Dtest=StatusCodeInterceptionTest
 
-      - name: run BlockTests
+      - name: Run BlockTests
         run: mvn test -Dtest=BlockTests
 
-      - name: run CartTest
+      - name: Run CartTest
         run: mvn test -Dtest=CartTest
 
 

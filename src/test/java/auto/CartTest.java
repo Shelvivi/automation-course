@@ -11,7 +11,6 @@ import java.nio.file.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 //Практическое задание 3: Создание теста с визуальными артефактами
 //Практическое задание 4: Интеграция скриншотов с Allure
@@ -26,7 +25,7 @@ public class CartTest {
     static void setupAll() throws IOException {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(false)
+                new BrowserType.LaunchOptions().setHeadless(true)
         );
 
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
