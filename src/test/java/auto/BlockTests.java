@@ -5,7 +5,7 @@ import org.junit.jupiter.api.*;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
-//2.2 Перехват сетевых запросов/Практическое задание 2: Тестируем сайт с рекламой
+//2.2 Перехват сетевых запросов/Практическое задание 2: Тестируем сайт с рекламой ()
 
     public class BlockTests {
         Playwright playwright;

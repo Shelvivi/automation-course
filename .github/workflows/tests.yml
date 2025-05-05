@@ -34,8 +34,15 @@ jobs:
       - name: Install Playwright browsers
         run: mvn exec:java -Dexec.mainClass="com.microsoft.playwright.CLI" -Dexec.args="install chromium"
 
-      - name: Run tests
+      - name: Run ExampleTest
         run: mvn test -Dtest=ExampleTest
+
+      - name: Run StatusCodeInterceptionTest
+        run: mvn test -Dtest=StatusCodeInterceptionTest
+
+      - name: run BlockTests
+        run: mvn test -Dtest=BlockTests
+
 
       - name: Upload test results
         if: always()
