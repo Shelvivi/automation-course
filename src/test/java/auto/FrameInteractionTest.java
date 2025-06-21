@@ -1,6 +1,7 @@
 package auto;
 
 import com.microsoft.playwright.*;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ public class FrameInteractionTest {
     void setUp() {
         playwright = Playwright.create();
         browser = playwright.chromium()
-                .launch(new BrowserType.LaunchOptions().setHeadless(false));
+                .launch(new BrowserType.LaunchOptions().setHeadless(true));
         context = browser.newContext();
         page = context.newPage();
     }
@@ -42,5 +43,10 @@ public class FrameInteractionTest {
 
         // Закрытие новой вкладки
         newPage.close();
+    }
+    @AfterEach
+    void tearDown() {
+        browser.close();
+        playwright.close();
     }
 }
