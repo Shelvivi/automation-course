@@ -46,6 +46,9 @@ jobs:
       - name: Run CartTest
         run: mvn test -Dtest=CartTest
 
+      - name: Run FrameInteractionTest
+        run: mvn test -Dtest=FrameInteractionTest
+
 
       - name: Upload test results
         if: always()
